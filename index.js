@@ -78,10 +78,19 @@ inquirer
                 margin-left: 25%;
                 margin-right: 25%;
                 background-color: blue; 
-                position: relative;   
+                position: relative;
+                height: 400px;   
             }
             .imgcontain {
                 position: absolute;
+                top: 20px;
+                left: 34%;
+            }
+            .headtext {
+                position: absolute;
+                bottom: 10px;
+                left: 34%;
+                text-align: center;
             }
             </style>
         </head>
@@ -93,27 +102,28 @@ inquirer
                     <div class="headtext">
                         <h1>Hello</h1>
                         <h2>My name is ${response.name}</h2>
-                        <h3>Currently @ </h3>
+                        <h3>Currently @ ${git.company} </h3>
                     
                         <a href="${git.html_url}">GitHub</a>
                         <a href="https://www.google.com/maps/place/${git.location}">Chicago, IL</a>
-                        <a href="${response.blog}">Blog</a>
+                        <a href="${git.blog}">Blog</a>
                     </div>    
                 </h3>
                 </header>
+                <br>
                 <div class="maincontent">
-                    <p style="">I am a web developer!</p>
+                    <p style="text-align: center;">${git.bio}</p>
                     <div class="contain">
-                        <div class="maintext">test</div>
+                        <div class="maintext">Public Repositories<br>${git.public_repos}</div>
                     </div>
                     <div class="contain">
-                        <div class="maintext">test</div>
+                        <div class="maintext">Followers<br>${git.followers}</div>
                     </div>
                     <div class="contain">
-                        <div class="maintext">test</div>
+                        <div class="maintext">Public Gists<br>${git.public_gists}</div>
                     </div>
                     <div class="contain">
-                        <div class="maintext">test</div>
+                        <div class="maintext">Following<br>${git.following}</div>
                     </div> 
                 </div>
         </body>
