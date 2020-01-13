@@ -1,1 +1,28 @@
-<div>fuck</div>
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Developer Profile</title>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        </head>
+        <body>
+                <header>
+                    <div class="imgcontain">
+                       <img src="">
+                    </div>
+                    <h1>Hello</h1>
+                    <h2>My name is Josh Segel</h2>
+                </header>
+            <script>
+                $.ajax({
+                    url: "https://api.github.com/users/jsegel9",
+                    method: "GET"
+                }).then(function(response){
+                    console.log(response);
+                })
+
+            </script>       
+        </body>
+        </html>

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Jsegel9/developerprofilegenerator#readme",
   "dependencies": {
-    "inquirer": "^7.0.3"
+    "inquirer": "^7.0.3",
+    "jquery": "^3.4.1"
   }
 }
