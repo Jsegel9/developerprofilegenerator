@@ -1,6 +1,10 @@
 var fs = require("fs");
 var inquirer = require("inquirer");
 const axios = require("axios");
+var util = require("util");
+
+const writeFileAsync = util.promisify(fs.writeFile);
+const readFileAsync = util.promisify(fs.readFile);
 
 inquirer
     .prompt([
@@ -16,13 +20,19 @@ inquirer
         }
     ])
     .then(function(response){
-        axios.get('https://api.github.com/users/' + response.username)
-            .then(res => {
-                console.log(res);
-            })
-            .catch(error => {
-                console.log(error);
-            })
+        // axios.get('https://api.github.com/users/' + response.username)
+        //     .then(res => {
+        //         // writeFileAsync("git.json", JSON.stringify(res.data))
+        //         fs.writeFile("git.json", JSON.stringify(res.data), function(err){
+        //             if (err) throw (err)
+        //         })
+        //     })
+        //     .catch(error => {
+        //         console.log(error);
+        //     })
+        let raw = fs.readFileSync("git.json");
+        let git = JSON.parse(raw);
+        console.log(git);
         const $html = `<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -38,6 +48,8 @@ inquirer
                     </div>
                     <h1>Hello</h1>
                     <h2>My name is ${response.q1}</h2>
+                    <h3>Currently @ </h3>
+                    <h3><a href="${git.html_url}">GitHub</a></h3>
                 </header>
         </body>
         </html>`

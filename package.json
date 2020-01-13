@@ -20,6 +20,7 @@
   "dependencies": {
     "axios": "^0.19.1",
     "inquirer": "^7.0.3",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "util": "^0.12.1"
   }
 }
