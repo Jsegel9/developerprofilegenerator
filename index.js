@@ -1,6 +1,6 @@
 var fs = require("fs");
 var inquirer = require("inquirer");
-var $ = require("jquery");
+const axios = require("axios");
 
 inquirer
     .prompt([
@@ -16,12 +16,13 @@ inquirer
         }
     ])
     .then(function(response){
-        $.ajax({
-            url: "https://api.github.com/users/" + response.username,
-            method: "GET"
-        }).then(function(res){
-            console.log(res);
-        })
+        axios.get('https://api.github.com/users/' + response.username)
+            .then(res => {
+                console.log(res);
+            })
+            .catch(error => {
+                console.log(error);
+            })
         const $html = `<!DOCTYPE html>
         <html lang="en">
         <head>
