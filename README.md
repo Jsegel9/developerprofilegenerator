@@ -7,8 +7,8 @@ I have created this command line app to enable users to develop an easy 1 page p
 In order to install this application simply clone it from the [repository](https://github.com/Jsegel9/developerprofilegenerator). Open the root directory in the command line and run the command "npm install" in order to install the necessary dependencies. Once the installation of these packages is complete run the command "node index.js" in order to run the application. 
 
 ## Usage
-After following the above steps you will be prompted by the application to answer a few questions in the command line interface. Answering these questions will give the application the necessary information to produce the developer profile. Upon answering these questions the the application will generate the html code for a web page containing your profile. Simply run the command alt + B on the index.html file to see your generated profile. Running the application a second time will overwrite this html file with a new profile containing the new information. A gif demonstrating the application can be found below.
-![Demonstration](/assets/images/profile.gif)
+After following the above steps you will be prompted by the application to answer a few questions in the command line interface. Answering these questions will give the application the necessary information to produce the developer profile. Upon answering these questions the the application will generate the html code for a web page containing your profile. Simply run the command alt + B on the index.html file to see your generated profile. Running the application a second time will overwrite this html file with a new profile containing the new information. A gif demonstrating the application can be found below. In case the gif is not working, navigate to the assets folder and open it from there.
+![Demonstration](./assets/images/profile.gif)
 
 
 ## License
